@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,48 +12,64 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GoGoGadgetVacuum" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="O2e-pM-hsG"/>
+                        <viewControllerLayoutGuide type="bottom" id="zj1-C6-ivR"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWX-fl-yVL">
+                                <rect key="frame" x="117" y="68" width="86" height="44"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="Send it!"/>
+                                <connections>
+                                    <action selector="sendItTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZJQ-Ie-wVb"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZq-YM-opj">
-                                <rect key="frame" x="20" y="261" width="374" height="374"/>
+                                <rect key="frame" x="36" y="160" width="248" height="248"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nZq-YM-opj" secondAttribute="height" multiplier="1:1" id="LY1-vF-8j0"/>
                                 </constraints>
-                                <state key="normal" image="vacuum-cleaner"/>
+                                <state key="normal" image="vacuum"/>
                                 <connections>
                                     <action selector="vacuumTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3s0-xS-Zsi"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6t4-Do-cKa">
-                                <rect key="frame" x="20" y="683" width="374" height="44"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Ixy-dn-Uar"/>
-                                </constraints>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Play&quot; from &lt;Mum's iPhone&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJK-OY-jw8">
+                                <rect key="frame" x="33.5" y="424" width="253" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="nZq-YM-opj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="SMk-a1-IHC"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="nZq-YM-opj" secondAttribute="trailing" id="Wbr-LQ-rcl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="6t4-Do-cKa" secondAttribute="trailing" id="Wmx-5Z-Ry7"/>
-                            <constraint firstItem="6t4-Do-cKa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cty-ul-V7v"/>
+                            <constraint firstItem="nJK-OY-jw8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2YQ-6c-USp"/>
+                            <constraint firstItem="nZq-YM-opj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="SMk-a1-IHC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nZq-YM-opj" secondAttribute="trailing" constant="20" id="Wbr-LQ-rcl"/>
                             <constraint firstItem="nZq-YM-opj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="m6C-Xw-X4m"/>
-                            <constraint firstItem="6t4-Do-cKa" firstAttribute="top" secondItem="nZq-YM-opj" secondAttribute="bottom" constant="48" id="w8e-2c-PeL"/>
+                            <constraint firstItem="pWX-fl-yVL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oIh-C9-l0e"/>
+                            <constraint firstItem="nJK-OY-jw8" firstAttribute="top" secondItem="nZq-YM-opj" secondAttribute="bottom" constant="16" id="qiW-k9-GJ3"/>
+                            <constraint firstItem="nZq-YM-opj" firstAttribute="top" secondItem="pWX-fl-yVL" secondAttribute="bottom" constant="48" id="xnO-Ch-K8D"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lastCommandLabel" destination="nJK-OY-jw8" id="DY5-3L-hDW"/>
                         <outlet property="vacuumButton" destination="nZq-YM-opj" id="vYC-s1-obU"/>
-                        <outlet property="volumeContainer" destination="6t4-Do-cKa" id="r4r-uf-NfF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="141" y="139"/>
         </scene>
     </scenes>
     <resources>
-        <image name="vacuum-cleaner" width="384" height="384"/>
+        <image name="vacuum" width="256" height="256"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

@@ -6,29 +6,43 @@
 //  Copyright © 2019 Vipul Delwadia. All rights reserved.
 //
 
+import MultipeerKit
+
 import UIKit
 import MediaPlayer
 
 class ViewController: UIViewController {
-    @IBOutlet private weak var volumeContainer: UIView!
     @IBOutlet weak var vacuumButton: UIButton!
-    private var volumeView: MPVolumeView!
+    @IBOutlet weak var lastCommandLabel: UILabel!
+
+    lazy var vacuumImage = UIImage(named: "vacuum")!
+
+    let viewModel = ViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
 
-        volumeView = MPVolumeView(frame: volumeContainer.bounds)
-        volumeContainer.addSubview(volumeView)
-
-//        vacuumButton.setImage(#imageLiteral(resourceName: "vacuum-cleaner.pdf").withRenderingMode(.alwaysTemplate), for: .normal)
+        viewModel.addObserver(self)
     }
 
     @IBAction func vacuumTapped(_ sender: Any) {
-        let command: Command = Store.shared.lastCommand == .play ? .pause : .play
-        Store.shared.setCommand(command)
-//        let isPlaying = AudioPlayer.shared.playVacuum()
-//        let image = isPlaying ? #imageLiteral(resourceName: "vacuum-cleaner.pdf") : #imageLiteral(resourceName: "vacuum-cleaner.pdf").withRenderingMode(.alwaysTemplate)
-//        vacuumButton.setImage(image, for: .normal)
+        viewModel.togglePlay()
+    }
+
+    @IBAction func sendItTapped(_ sender: Any) {
+        viewModel.togglePlayRemote()
+    }
+}
+
+extension ViewController: ViewModelObserver {
+    func stateChanged(newState: ViewModel.ViewState) {
+        switch newState.playerStatus {
+        case .playing:
+            vacuumButton.setImage(vacuumImage, for: .normal)
+        case .paused:
+            vacuumButton.setImage(vacuumImage.withRenderingMode(.alwaysTemplate), for: .normal)
+        }
+
+        lastCommandLabel.text = newState.sourceText
     }
 }

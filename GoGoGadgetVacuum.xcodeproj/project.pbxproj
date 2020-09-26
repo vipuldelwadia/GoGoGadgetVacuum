@@ -3,25 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		013A105F22E5B2BA008B4EAB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013A105E22E5B2BA008B4EAB /* Constants.swift */; };
-		013C690F25185F6300F75328 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016609C122E68FB800313803 /* CloudKit.framework */; };
 		01A181C322E2C62500C5AFFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A181C222E2C62500C5AFFF /* AppDelegate.swift */; };
 		01A181C522E2C62500C5AFFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A181C422E2C62500C5AFFF /* ViewController.swift */; };
 		01A181C822E2C62500C5AFFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A181C622E2C62500C5AFFF /* Main.storyboard */; };
 		01A181CA22E2C62700C5AFFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01A181C922E2C62700C5AFFF /* Assets.xcassets */; };
 		01A181CD22E2C62700C5AFFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A181CB22E2C62700C5AFFF /* LaunchScreen.storyboard */; };
-		01A181D522E2D64000C5AFFF /* dyson.wav in Resources */ = {isa = PBXBuildFile; fileRef = 01A181D422E2D64000C5AFFF /* dyson.wav */; };
 		01A181D722E2D79500C5AFFF /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A181D622E2D79500C5AFFF /* AudioPlayer.swift */; };
 		01A181DD22E3CBA500C5AFFF /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A181DC22E3CBA500C5AFFF /* Store.swift */; };
+		01EC9B99251F11C700EB6E83 /* vacuum.wav in Resources */ = {isa = PBXBuildFile; fileRef = 01EC9B98251F11C700EB6E83 /* vacuum.wav */; };
+		01EC9B9C251F1C1700EB6E83 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EC9B9B251F1C1700EB6E83 /* ViewModel.swift */; };
+		01EC9BA7251F529000EB6E83 /* MultipeerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EC9BA6251F529000EB6E83 /* MultipeerManager.swift */; };
+		01EC9BAC251F5BDF00EB6E83 /* MultipeerKitDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 01EC9BAB251F5BDF00EB6E83 /* MultipeerKitDynamic */; };
+		01EC9BAD251F5BDF00EB6E83 /* MultipeerKitDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 01EC9BAB251F5BDF00EB6E83 /* MultipeerKitDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		01EC9BAE251F5BE000EB6E83 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				01EC9BAD251F5BDF00EB6E83 /* MultipeerKitDynamic in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		013A105E22E5B2BA008B4EAB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		016609C122E68FB800313803 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		01A181BF22E2C62500C5AFFF /* GoGoGadgetVacuum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoGoGadgetVacuum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01A181C222E2C62500C5AFFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01A181C422E2C62500C5AFFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,10 +43,11 @@
 		01A181C922E2C62700C5AFFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01A181CC22E2C62700C5AFFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01A181CE22E2C62700C5AFFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		01A181D422E2D64000C5AFFF /* dyson.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dyson.wav; sourceTree = "<group>"; };
 		01A181D622E2D79500C5AFFF /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
-		01A181D822E30BA600C5AFFF /* GoGoGadgetVacuum.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GoGoGadgetVacuum.entitlements; sourceTree = "<group>"; };
 		01A181DC22E3CBA500C5AFFF /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		01EC9B98251F11C700EB6E83 /* vacuum.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = vacuum.wav; sourceTree = "<group>"; };
+		01EC9B9B251F1C1700EB6E83 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		01EC9BA6251F529000EB6E83 /* MultipeerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				013C690F25185F6300F75328 /* CloudKit.framework in Frameworks */,
+				01EC9BAC251F5BDF00EB6E83 /* MultipeerKitDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +67,6 @@
 			children = (
 				01A181C122E2C62500C5AFFF /* GoGoGadgetVacuum */,
 				01A181C022E2C62500C5AFFF /* Products */,
-				01A181D922E3C64000C5AFFF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,27 +81,19 @@
 		01A181C122E2C62500C5AFFF /* GoGoGadgetVacuum */ = {
 			isa = PBXGroup;
 			children = (
-				01A181D822E30BA600C5AFFF /* GoGoGadgetVacuum.entitlements */,
+				01EC9B98251F11C700EB6E83 /* vacuum.wav */,
 				01A181C222E2C62500C5AFFF /* AppDelegate.swift */,
 				01A181C422E2C62500C5AFFF /* ViewController.swift */,
 				01A181C622E2C62500C5AFFF /* Main.storyboard */,
 				01A181C922E2C62700C5AFFF /* Assets.xcassets */,
 				01A181CB22E2C62700C5AFFF /* LaunchScreen.storyboard */,
 				01A181CE22E2C62700C5AFFF /* Info.plist */,
-				01A181D422E2D64000C5AFFF /* dyson.wav */,
 				01A181D622E2D79500C5AFFF /* AudioPlayer.swift */,
 				01A181DC22E3CBA500C5AFFF /* Store.swift */,
-				013A105E22E5B2BA008B4EAB /* Constants.swift */,
+				01EC9B9B251F1C1700EB6E83 /* ViewModel.swift */,
+				01EC9BA6251F529000EB6E83 /* MultipeerManager.swift */,
 			);
 			path = GoGoGadgetVacuum;
-			sourceTree = "<group>";
-		};
-		01A181D922E3C64000C5AFFF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				016609C122E68FB800313803 /* CloudKit.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,12 +106,16 @@
 				01A181BB22E2C62500C5AFFF /* Sources */,
 				01A181BC22E2C62500C5AFFF /* Frameworks */,
 				01A181BD22E2C62500C5AFFF /* Resources */,
+				01EC9BAE251F5BE000EB6E83 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = GoGoGadgetVacuum;
+			packageProductDependencies = (
+				01EC9BAB251F5BDF00EB6E83 /* MultipeerKitDynamic */,
+			);
 			productName = GoGoGadgetVacuum;
 			productReference = 01A181BF22E2C62500C5AFFF /* GoGoGadgetVacuum.app */;
 			productType = "com.apple.product-type.application";
@@ -117,7 +127,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Vipul Delwadia";
 				TargetAttributes = {
 					01A181BE22E2C62500C5AFFF = {
@@ -145,6 +155,9 @@
 				Base,
 			);
 			mainGroup = 01A181B622E2C62500C5AFFF;
+			packageReferences = (
+				01EC9BAA251F5BDF00EB6E83 /* XCRemoteSwiftPackageReference "MultipeerKit" */,
+			);
 			productRefGroup = 01A181C022E2C62500C5AFFF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -161,8 +174,8 @@
 			files = (
 				01A181CD22E2C62700C5AFFF /* LaunchScreen.storyboard in Resources */,
 				01A181CA22E2C62700C5AFFF /* Assets.xcassets in Resources */,
-				01A181D522E2D64000C5AFFF /* dyson.wav in Resources */,
 				01A181C822E2C62500C5AFFF /* Main.storyboard in Resources */,
+				01EC9B99251F11C700EB6E83 /* vacuum.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,10 +186,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				013A105F22E5B2BA008B4EAB /* Constants.swift in Sources */,
 				01A181C522E2C62500C5AFFF /* ViewController.swift in Sources */,
+				01EC9BA7251F529000EB6E83 /* MultipeerManager.swift in Sources */,
 				01A181C322E2C62500C5AFFF /* AppDelegate.swift in Sources */,
 				01A181D722E2D79500C5AFFF /* AudioPlayer.swift in Sources */,
+				01EC9B9C251F1C1700EB6E83 /* ViewModel.swift in Sources */,
 				01A181DD22E3CBA500C5AFFF /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,6 +243,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -254,7 +269,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -290,6 +305,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -309,7 +325,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -324,11 +340,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = GoGoGadgetVacuum/GoGoGadgetVacuum.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TLX7RVSV2G;
 				INFOPLIST_FILE = GoGoGadgetVacuum/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -346,11 +362,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = GoGoGadgetVacuum/GoGoGadgetVacuum.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TLX7RVSV2G;
 				INFOPLIST_FILE = GoGoGadgetVacuum/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -385,6 +401,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		01EC9BAA251F5BDF00EB6E83 /* XCRemoteSwiftPackageReference "MultipeerKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "http://github.com/vipuldelwadia/MultipeerKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		01EC9BAB251F5BDF00EB6E83 /* MultipeerKitDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01EC9BAA251F5BDF00EB6E83 /* XCRemoteSwiftPackageReference "MultipeerKit" */;
+			productName = MultipeerKitDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 01A181B722E2C62500C5AFFF /* Project object */;
 }
